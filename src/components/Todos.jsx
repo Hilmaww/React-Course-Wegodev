@@ -1,12 +1,30 @@
+import { array } from 'prop-types';
 import React from 'react';
-
+import Todo from './Todo';
 
 const Todos = () => {
+   const todos =[
+       {
+        text: "Belajar React"
+   },
+        {
+        text: "Belajar React"
+   },
+        {
+        text: "Belajar React"
+   },
+        {
+        text: "Belajar React"
+   },
+        {
+         text:"kocak"   
+        }
+    ]
     return(
         <section className="todos">
-            <div className="todo">
-             <span className="text-todo">Learning React</span>
-            </div>
+            {todos.map(todo => {
+                return <Todo text={todo.text}/>
+            })}
         </section>     
     );
 }
