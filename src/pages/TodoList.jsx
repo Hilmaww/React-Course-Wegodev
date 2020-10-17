@@ -10,10 +10,19 @@ const TodoList = () => {
     {text: "Learning React!"},
     {text: "LOL!"}
   ])
+
+  const addTodo = value =>{
+    const addedTodo = [...todos, { text: value }];
+
+    setTodos(addedTodo);
+  };
+  
+console.log("todos", todos);
+
   return (
     <Paper>
       <Header/>
-      <TodoForm/>
+      <TodoForm addTodo={addTodo}/>
       <Todos todos={ todos }/>  
     </Paper>
   );
