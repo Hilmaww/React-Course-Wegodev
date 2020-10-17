@@ -6,7 +6,7 @@ const Todos = ({ todos }) => {
    
     return(
         <section className="todos">
-            {todos.map(todo, index) => {
+            {todos.map((todo, index) => {
                 return <Todo key={index} text={todo.text}/>
             })}
         </section>     
